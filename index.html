@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pelanggaran FE</title>
+</head>
+<body>
+  <script type="module">
+    import { isTokenValid } from "./assets/js/auth.js";
+    window.location.href = isTokenValid() ? "dashboard.html" : "login.html";
+  </script>
+</body>
+</html>
