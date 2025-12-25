@@ -1,1 +1,82 @@
-body { background: #f8f9fa; }
+:root{
+  --bg: #0b1220;
+  --card: rgba(255,255,255,.06);
+  --card2: rgba(255,255,255,.08);
+  --border: rgba(255,255,255,.10);
+  --text: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.65);
+}
+
+body {
+  background:
+    radial-gradient(1000px 400px at 15% -10%, rgba(59,130,246,.35), transparent 55%),
+    radial-gradient(900px 500px at 90% 0%, rgba(168,85,247,.28), transparent 55%),
+    radial-gradient(900px 500px at 30% 110%, rgba(34,197,94,.20), transparent 55%),
+    var(--bg);
+  color: var(--text);
+}
+
+a { text-decoration: none; }
+
+.card.glass {
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+}
+
+.navbar.glass {
+  background: rgba(255,255,255,.06) !important;
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.btn-soft {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.10);
+  color: var(--text);
+}
+.btn-soft:hover { background: rgba(255,255,255,.12); color: var(--text); }
+
+.text-muted { color: var(--muted) !important; }
+
+.table.glass {
+  color: var(--text);
+}
+.table.glass thead th {
+  color: rgba(255,255,255,.85);
+  border-bottom-color: rgba(255,255,255,.12);
+}
+.table.glass td, .table.glass th {
+  border-top-color: rgba(255,255,255,.08);
+}
+
+.form-control, .form-select {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--text);
+}
+.form-control::placeholder { color: rgba(255,255,255,.45); }
+.form-control:focus, .form-select:focus {
+  background: rgba(255,255,255,.07);
+  border-color: rgba(59,130,246,.55);
+  box-shadow: 0 0 0 .25rem rgba(59,130,246,.15);
+  color: var(--text);
+}
+
+.badge-soft {
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.12);
+  color: rgba(255,255,255,.85);
+}
+
+.page-link {
+  background: rgba(255,255,255,.06);
+  border-color: rgba(255,255,255,.10);
+  color: rgba(255,255,255,.88);
+}
+.page-item.disabled .page-link { opacity: .45; }
+.page-item.active .page-link {
+  background: rgba(59,130,246,.55);
+  border-color: rgba(59,130,246,.65);
+}

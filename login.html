@@ -1,40 +1,81 @@
 <!doctype html>
 <html lang="id">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="./assets/css/app.css" rel="stylesheet">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login • Pelanggaran</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="./assets/css/app.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-  <div class="container py-5" style="max-width: 520px;">
-    <div class="card shadow-sm">
-      <div class="card-body p-4">
-        <h4 class="mb-1">Login</h4>
-        <p class="text-muted mb-4">JWT akan disimpan dan dipakai untuk akses modul.</p>
+<body>
+  <main class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <div class="mb-3">
+          <span class="badge badge-soft px-3 py-2"><i class="bi bi-shield-lock me-2"></i>JWT Auth • REST API</span>
+        </div>
+        <h1 class="fw-semibold lh-sm">Dashboard Pelanggaran & Objek Melintas</h1>
+        <p class="text-muted mb-4">
+          Login untuk mengakses modul transaksi. Token akan disimpan dan dipakai untuk validasi akses.
+        </p>
 
-        <div id="alert"></div>
-
-        <form id="formLogin">
-          <div class="mb-3">
-            <label class="form-label">Username</label>
-            <input name="username" class="form-control" placeholder="admin" required />
+        <div class="card glass p-3">
+          <div class="d-flex gap-3">
+            <div class="display-6"><i class="bi bi-lightning-charge"></i></div>
+            <div>
+              <div class="fw-semibold">Cepat & sederhana</div>
+              <div class="text-muted small">Frontend vanilla JS + Bootstrap, backend CI4 + JWT.</div>
+            </div>
           </div>
-          <div class="mb-3">
-            <label class="form-label">Password</label>
-            <input name="password" type="password" class="form-control" placeholder="admin123" required />
-          </div>
-          <button class="btn btn-primary w-100" type="submit">Masuk</button>
-        </form>
+        </div>
+      </div>
 
-        <hr class="my-4">
-        <div class="small text-muted">
-          Default dari seeder API: <b>admin / admin123</b>
+      <div class="col-lg-5 ms-auto">
+        <div class="card glass shadow-sm">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div>
+                <h4 class="mb-0">Login</h4>
+                <div class="text-muted small">Masuk untuk melanjutkan</div>
+              </div>
+              <div class="badge badge-soft"><i class="bi bi-person-circle me-2"></i>Admin</div>
+            </div>
+
+            <div id="alert"></div>
+
+            <form id="formLogin" class="mt-3">
+              <div class="mb-3">
+                <label class="form-label">Username</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent text-white border-0"><i class="bi bi-person"></i></span>
+                  <input name="username" class="form-control" placeholder="admin" required />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <div class="input-group">
+                  <span class="input-group-text bg-transparent text-white border-0"><i class="bi bi-key"></i></span>
+                  <input name="password" type="password" class="form-control" placeholder="admin123" required />
+                </div>
+              </div>
+
+              <button class="btn btn-primary w-100 py-2" type="submit">
+                <i class="bi bi-box-arrow-in-right me-2"></i>Masuk
+              </button>
+            </form>
+
+            <div class="mt-4 small text-muted">
+              Default dari seeder API: <b class="text-white">admin / admin123</b>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
   <script type="module" src="./assets/js/pages/login.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
